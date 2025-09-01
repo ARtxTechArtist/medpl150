@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Readings</title>
+</head>
+<body>
+  <h1>Medpl 150 Readings</h1>
+
+  <p>Below is a link to your first reading reflection:</p>
+
+  <ul>
+    <li><a href="reading1.html">Reading 1 – Susan Sontag, <em>On Photography</em></a></li>
+  </ul>
+
+  <p><a href="index.html">Back to Readings</a></p>
+</body>
+</html>
