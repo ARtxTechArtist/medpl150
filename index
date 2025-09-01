@@ -16,6 +16,7 @@ Much of my creative practice uses animation, projection, sound, and interactive 
 In MEDPL 150, I want to expand my skills in visual communication by learning new design tools and techniques. I am especially interested in how web design, photography, and illustration can be combined to tell stories in fresh and meaningful ways.
 
 This site will serve as a portfolio of my projects and reflections throughout the semester. My goal is to experiment, take risks, and grow as a designer while connecting my personal voice to the principles of visual communication.</p>
+ <img src="images/racheljungeunoh.jpg" alt="My Headshot" width="300">
 
   <h2>Reflection</h2>
   <p> Learning HTML is like learning how to talk to robots in their native language. At first, the angle brackets and tags felt like alien symbols, but then I realized they’re just polite commands—“this is a heading,” “this is a paragraph,” “put this image here.”
@@ -23,10 +24,11 @@ This site will serve as a portfolio of my projects and reflections throughout th
 Of course, the robots are very strict. Forget one little slash, and they throw a tantrum, breaking the whole page. Still, there’s something satisfying about giving simple instructions and watching a clean webpage come to life. It’s bossy, logical, and oddly fun.</p>
 
   <img src="images/racheljungeunoh.jpg" alt="My Headshot" width="300">
+  <p><a href="readings.html">Reading Reflection #1</a></p>
 
   <footer>
-    <p>Contact: racheljungeun@gmail.com <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    <p><a href="readings.html">Reading Reflections</a></p>
+    <p>Contact: racheljungeun@gmail.com <a href="mailto:youremail@example.com"></a></p>
+
   </footer>
 </body>
 </html>
