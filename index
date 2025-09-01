@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Rachel Oh MEDPL 150 Portfolio</title>
+  <title>Rachel Jungeun Oh MEDPL 150 Portfolio</title>
 </head>
 <body>
-  <h1>Rachel Oh</h1>
+  <h1>Rachel Jungeun Oh</h1>
   <p>Welcome to my portfolio website for MEDPL 150.</p>
 
   <h2>Creative Statement</h2>
@@ -22,7 +22,7 @@ This site will serve as a portfolio of my projects and reflections throughout th
 
 Of course, the robots are very strict. Forget one little slash, and they throw a tantrum, breaking the whole page. Still, there’s something satisfying about giving simple instructions and watching a clean webpage come to life. It’s bossy, logical, and oddly fun.</p>
 
-  <img src="images/headshot.jpg" alt="My Headshot" width="300">
+  <img src="images/racheljungeunoh.jpg" alt="My Headshot" width="300">
 
   <footer>
     <p>Contact: racheljungeun@gmail.com <a href="mailto:youremail@example.com">youremail@example.com</a></p>
