@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rachel Oh MEDPL 150 Portfolio</title>
+</head>
+<body>
+  <h1>Rachel Oh</h1>
+  <p>Welcome to my portfolio website for MEDPL 150.</p>
 
+  <h2>Creative Statement</h2>
+  <p>My name is Rachel Jungeun Oh, and I am a visual artist and educator who explores memory, migration, and storytelling through digital media. I was born and raised in Korea and later moved to the United States, and this experience of crossing cultures shapes the way I think about communication and design.
+
+Much of my creative practice uses animation, projection, sound, and interactive design to weave together personal and collective memory. I often draw inspiration from lullabies passed down in my family and reimagine them through contemporary digital tools. These projects are not only about preserving the past but also about creating new connections across generations and audiences.
+
+In MEDPL 150, I want to expand my skills in visual communication by learning new design tools and techniques. I am especially interested in how web design, photography, and illustration can be combined to tell stories in fresh and meaningful ways.
+
+This site will serve as a portfolio of my projects and reflections throughout the semester. My goal is to experiment, take risks, and grow as a designer while connecting my personal voice to the principles of visual communication.</p>
+
+  <h2>Reflection</h2>
+  <p> Learning HTML is like learning how to talk to robots in their native language. At first, the angle brackets and tags felt like alien symbols, but then I realized they’re just polite commands—“this is a heading,” “this is a paragraph,” “put this image here.”
+
+Of course, the robots are very strict. Forget one little slash, and they throw a tantrum, breaking the whole page. Still, there’s something satisfying about giving simple instructions and watching a clean webpage come to life. It’s bossy, logical, and oddly fun.</p>
+
+  <img src="images/headshot.jpg" alt="My Headshot" width="300">
+
+  <footer>
+    <p>Contact: racheljungeun@gmail.com <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p><a href="readings.html">Reading Reflections</a></p>
+  </footer>
+</body>
+</html>
