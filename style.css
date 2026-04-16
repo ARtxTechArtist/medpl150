@@ -1,51 +1,66 @@
 body {
-    background-color: #F27141;
+    background-color: #9FD966;
+    color: #37730D;
     font-family: Arial, sans-serif;
     margin: 40px;
     line-height: 1.6;
-    color: #333;
 }
 
 h1 {
-    color: #85BFF2;
+    color: #9B49A6;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
 h2 {
+    color: #F23558;
     margin-top: 30px;
-    color: #4a6fa5;
+    font-size: 30px;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    max-width: 900px;
+    font-size: 18px;
 }
 
 img {
-    border-radius: 10px;
+    border-radius: 16px;
     margin: 20px 0;
+    border: 6px solid #5FBF1B;
+    box-shadow: 0 4px 12px rgba(55, 115, 13, 0.25);
 }
 
-/* Make homework links feel interactive */
 h3 a {
     display: inline-block;
-    padding: 8px 12px;
-    background-color: #3366ff;
+    padding: 12px 18px;
+    background-color: #9B49A6;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 8px;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    font-weight: bold;
 }
 
-/* Hover = affordance + feedback */
 h3 a:hover {
-    background-color: #ff6600;
+    background-color: #F23558;
     transform: scale(1.05);
 }
 
-/* Strike-through style */
 s {
-    color: gray;
+    color: #37730D;
+    opacity: 0.6;
 }
 
-/* Footer */
 footer {
-    margin-top: 40px;
-    font-size: 14px;
-    color: gray;
+    margin-top: 50px;
+    font-size: 15px;
+    color: #37730D;
+    border-top: 2px solid #5FBF1B;
+    padding-top: 15px;
 }
