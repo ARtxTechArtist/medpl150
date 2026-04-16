@@ -1,19 +1,9 @@
 body {
-    margin: 40px;
+    background-color: #f8f8f8;
     font-family: Arial, sans-serif;
+    margin: 40px;
     line-height: 1.6;
-}
-
-/* Mood: sunny meadow */
-body.sunny-meadow {
-    background-color: #f4ffe8;
-    color: #2f4f2f;
-}
-
-/* Mood: dark forest */
-body.dark-forest {
-    background-color: #0b1a13;
-    color: #cde8d0;
+    color: #333;
 }
 
 h1 {
@@ -22,30 +12,35 @@ h1 {
 
 h2 {
     margin-top: 30px;
+    color: #4a6fa5;
 }
 
-/* Image styling */
 img {
     border-radius: 10px;
     margin: 20px 0;
 }
 
-/* Link as interactive button */
-a.choice {
+/* Make homework links feel interactive */
+h3 a {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 8px 12px;
     background-color: #3366ff;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    margin-bottom: 8px;
     transition: 0.3s;
 }
 
 /* Hover = affordance + feedback */
-a.choice:hover {
+h3 a:hover {
     background-color: #ff6600;
     transform: scale(1.05);
-    cursor: pointer;
+}
+
+/* Strike-through style */
+s {
+    color: gray;
 }
 
 /* Footer */
