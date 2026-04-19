@@ -20,7 +20,7 @@ body {
   /* Subtle digital noise pattern */
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIHZpZXdCb3g9IjAgMCA0IDQiPjxnIGZpbGwtb3BhY2l0eT0iMC4wNSIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTAgMGg0djRIMGgwek0xIDF2MWgyVjFIMXoiLz48L2c+PC9zdmc+');
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,59 +147,3 @@ p[id^="ending"] {
 }
 
 
-/* --- Animation Definitions --- */
-
-/* Flicker Effect (applied to Red Endings) */
-@keyframes flicker {
-  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-    opacity: 1;
-  }
-  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-    opacity: 0.4;
-  }
-}
-
-/* Title Glitch Animation (Text Distortion) */
-@keyframes glitch-skew {
-  0% { transform: skew(-1deg); }
-  10% { transform: skew(3deg); }
-  20% { transform: skew(-2deg); }
-  30% { transform: skew(1deg); }
-  40% { transform: skew(-3deg); }
-  50% { transform: skew(2deg); }
-  60% { transform: skew(-1deg); }
-  70% { transform: skew(3deg); }
-  80% { transform: skew(-2deg); }
-  90% { transform: skew(1deg); }
-  100% { transform: skew(0deg); }
-}
-
-/* Title Glitch Animation (Color Separation 1) */
-@keyframes glitch-anim-1 {
-  0% { clip: rect(20px, 9999px, 15px, 0); }
-  10% { clip: rect(80px, 9999px, 60px, 0); }
-  20% { clip: rect(40px, 9999px, 30px, 0); }
-  30% { clip: rect(10px, 9999px, 70px, 0); }
-  40% { clip: rect(90px, 9999px, 20px, 0); }
-  50% { clip: rect(50px, 9999px, 90px, 0); }
-  60% { clip: rect(70px, 9999px, 40px, 0); }
-  70% { clip: rect(30px, 9999px, 80px, 0); }
-  80% { clip: rect(100px, 9999px, 10px, 0); }
-  90% { clip: rect(60px, 9999px, 50px, 0); }
-  100% { clip: rect(20px, 9999px, 30px, 0); }
-}
-
-/* Title Glitch Animation (Color Separation 2) */
-@keyframes glitch-anim-2 {
-  0% { clip: rect(70px, 9999px, 80px, 0); }
-  10% { clip: rect(30px, 9999px, 10px, 0); }
-  20% { clip: rect(90px, 9999px, 50px, 0); }
-  30% { clip: rect(20px, 9999px, 90px, 0); }
-  40% { clip: rect(60px, 9999px, 40px, 0); }
-  50% { clip: rect(100px, 9999px, 20px, 0); }
-  60% { clip: rect(40px, 9999px, 70px, 0); }
-  70% { clip: rect(10px, 9999px, 30px, 0); }
-  80% { clip: rect(80px, 9999px, 100px, 0); }
-  90% { clip: rect(50px, 9999px, 60px, 0); }
-  100% { clip: rect(70px, 9999px, 80px, 0); }
-}
