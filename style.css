@@ -1,147 +1,205 @@
+/* Core Theme Configuration */
 :root {
-  --bg-color: #05050a;
-  --text-color: #e0e0e0;
-  --accent-cyan: #0ffff0;
-  --accent-red: #ff0055;
-  --accent-yellow: #f0f000;
-  --border-style: 1px solid var(--accent-cyan);
-  --font-main: "Courier New", Courier, monospace;
+  --bg-color: #05050a; /* Deep, shadowed blue (nearly black) */
+  --text-color: #e0e0e0; /* Light gray (easier on the eyes than pure white) */
+  --accent-neon-green: #0ffff0; /* Cold, digital neon cyan */
+  --accent-neon-red: #ff0055; /* Warning, dangerous neon red */
+  --choice-color: #f0f000; /* Cautionary yellow */
+  --border-style: 1px solid var(--accent-neon-green);
+  --font-family: 'Courier New', Courier, monospace; /* Monospaced terminal font */
 }
 
+/* Base Page Layout and Background */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: var(--font-main);
+  font-family: var(--font-family);
   margin: 0;
   padding: 20px;
   line-height: 1.6;
+  /* Subtle digital noise pattern */
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIHZpZXdCb3g9IjAgMCA0IDQiPjxnIGZpbGwtb3BhY2l0eT0iMC4wNSIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTAgMGg0djRIMGgwek0xIDF2MWgyVjFIMXoiLz48L2c+PC9zdmc+');
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIHZpZXdCb3g9IjAgMCA0IDQiPjxnIGZpbGwtb3BhY2l0eT0iMC4wNSIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTAgMGg0djRIMGgwek0xIDF2MWgyVjFIMXoiLz48L2c+PC9zdmc+");
 }
 
-main,
-.narrative-map {
-  max-width: 850px;
+/* Main Content Container */
+main, .narrative-map {
+  max-width: 800px;
   width: 100%;
 }
 
+/* Title Style (with Glitch Effect) */
 h2 {
+  color: var(--text-color);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-bottom: 30px;
-  color: var(--text-color);
-  text-shadow: 0 0 6px var(--accent-cyan), 0 0 12px var(--accent-cyan);
+  position: relative;
+  text-shadow: 
+    0 0 5px var(--accent-neon-green),
+    0 0 10px var(--accent-neon-green);
+  animation: glitch-skew 4s infinite linear alternate-reverse;
 }
 
-.story-block {
-  margin: 20px 0;
-  padding: 15px 18px;
-  border: var(--border-style);
-  background-color: rgba(15, 255, 240, 0.04);
-  box-shadow: 0 0 10px rgba(15, 255, 240, 0.08);
-}
-
-.start-label,
-.choice-label,
-.ending-label,
-.scene-label {
-  display: inline-block;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 3px 8px;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-}
-
-.start-label,
-.scene-label {
-  background-color: var(--text-color);
-  color: var(--bg-color);
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
-}
-
-.choice-label {
-  color: var(--accent-yellow);
-  border: 1px solid var(--accent-yellow);
-  background-color: transparent;
-}
-
-.ending-label {
-  color: var(--accent-red);
-  border: 1px solid var(--accent-red);
-  background-color: transparent;
-  text-shadow: 0 0 6px var(--accent-red);
-}
-
-.arrow {
-  text-align: center;
-  color: var(--accent-cyan);
-  font-size: 1.3em;
-  margin: 10px 0;
-  text-shadow: 0 0 6px var(--accent-cyan);
-}
-
-.branch {
-  color: var(--accent-cyan);
+h2::before,
+h2::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   opacity: 0.8;
-  margin-right: 8px;
 }
 
-.choice-options {
-  margin-top: 10px;
-  padding-left: 18px;
+h2::before {
+  color: var(--accent-neon-red);
+  z-index: -1;
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
 }
 
-.choice-options p {
-  margin: 8px 0;
+h2::after {
+  color: var(--accent-neon-green);
+  z-index: -2;
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
 }
 
-.ending {
-  border-left: 3px solid var(--accent-red);
-  padding-left: 12px;
-  margin-top: 12px;
+/* 'Start' and Major State Blocks (White Block Style) */
+strong {
+  display: inline-block;
+  color: var(--bg-color);
+  background-color: var(--text-color);
+  padding: 2px 8px;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  margin-top: 1em;
 }
 
-.scene-text,
-.choice-text,
-.ending-text {
-  margin: 8px 0;
+/* Connecting Arrows (↓) */
+p:has(> strong) + p,
+.arrow {
+  color: var(--accent-neon-green);
+  text-align: center;
+  font-size: 1.2em;
+  text-shadow: 0 0 5px var(--accent-neon-green);
+  margin: 15px 0;
 }
 
-a {
-  color: var(--accent-cyan);
-  text-decoration: none;
+/* Choice Section Blocks (Choice 1-6) */
+.choice-block {
+  border: var(--border-style);
+  padding: 15px;
+  margin: 20px 0;
+  position: relative;
+  background-color: rgba(15, 255, 240, 0.03); /* Very faint cyan background */
 }
 
-a:hover {
-  text-decoration: underline;
-  text-shadow: 0 0 6px var(--accent-cyan);
+/* 'Choice X' Header Label */
+.choice-block > strong {
+  color: var(--choice-color);
+  background-color: transparent;
+  box-shadow: none;
+  border: 1px solid var(--choice-color);
+  text-transform: uppercase;
+  font-size: 0.9em;
+  padding: 2px 5px;
+  margin: 0;
+  position: absolute;
+  top: -10px;
+  left: 15px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border: 1px solid var(--accent-cyan);
-  box-shadow: 0 0 14px rgba(15, 255, 240, 0.15);
+/* Choice Text Options */
+.choice-block strong {
+  color: var(--choice-color);
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 1.1em;
 }
 
-@media (max-width: 600px) {
-  body {
-    padding: 12px;
+/* Branching Symbols (├──, └──) */
+span.branch {
+  color: var(--accent-neon-green);
+  opacity: 0.7;
+}
+
+/* Ending Style (High Alert, Red Accent) */
+p[id^="ending"] strong,
+.ending-text strong {
+  color: var(--accent-neon-red);
+  background-color: transparent;
+  box-shadow: none;
+  text-transform: uppercase;
+  text-shadow: 
+    0 0 5px var(--accent-neon-red),
+    0 0 10px var(--accent-neon-red);
+  animation: flicker 1.5s infinite; /* Warning flicker effect */
+}
+
+p[id^="ending"] {
+  border-left: 3px solid var(--accent-neon-red);
+  padding-left: 10px;
+  margin-left: 20px;
+}
+
+
+/* --- Animation Definitions --- */
+
+/* Flicker Effect (applied to Red Endings) */
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 1;
   }
-
-  .story-block {
-    padding: 12px;
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
   }
+}
 
-  h2 {
-    font-size: 1.2rem;
-  }
+/* Title Glitch Animation (Text Distortion) */
+@keyframes glitch-skew {
+  0% { transform: skew(-1deg); }
+  10% { transform: skew(3deg); }
+  20% { transform: skew(-2deg); }
+  30% { transform: skew(1deg); }
+  40% { transform: skew(-3deg); }
+  50% { transform: skew(2deg); }
+  60% { transform: skew(-1deg); }
+  70% { transform: skew(3deg); }
+  80% { transform: skew(-2deg); }
+  90% { transform: skew(1deg); }
+  100% { transform: skew(0deg); }
+}
+
+/* Title Glitch Animation (Color Separation 1) */
+@keyframes glitch-anim-1 {
+  0% { clip: rect(20px, 9999px, 15px, 0); }
+  10% { clip: rect(80px, 9999px, 60px, 0); }
+  20% { clip: rect(40px, 9999px, 30px, 0); }
+  30% { clip: rect(10px, 9999px, 70px, 0); }
+  40% { clip: rect(90px, 9999px, 20px, 0); }
+  50% { clip: rect(50px, 9999px, 90px, 0); }
+  60% { clip: rect(70px, 9999px, 40px, 0); }
+  70% { clip: rect(30px, 9999px, 80px, 0); }
+  80% { clip: rect(100px, 9999px, 10px, 0); }
+  90% { clip: rect(60px, 9999px, 50px, 0); }
+  100% { clip: rect(20px, 9999px, 30px, 0); }
+}
+
+/* Title Glitch Animation (Color Separation 2) */
+@keyframes glitch-anim-2 {
+  0% { clip: rect(70px, 9999px, 80px, 0); }
+  10% { clip: rect(30px, 9999px, 10px, 0); }
+  20% { clip: rect(90px, 9999px, 50px, 0); }
+  30% { clip: rect(20px, 9999px, 90px, 0); }
+  40% { clip: rect(60px, 9999px, 40px, 0); }
+  50% { clip: rect(100px, 9999px, 20px, 0); }
+  60% { clip: rect(40px, 9999px, 70px, 0); }
+  70% { clip: rect(10px, 9999px, 30px, 0); }
+  80% { clip: rect(80px, 9999px, 100px, 0); }
+  90% { clip: rect(50px, 9999px, 60px, 0); }
+  100% { clip: rect(70px, 9999px, 80px, 0); }
 }
