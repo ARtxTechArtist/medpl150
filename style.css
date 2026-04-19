@@ -67,6 +67,33 @@ h2::after {
   z-index: -2;
   animation: glitch-anim-2 3s infinite linear alternate-reverse;
 }
+/* Center all elements within the body (Optional, base alignment) */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontal center alignment */
+    justify-content: center; /* Vertical center alignment (based on screen height) */
+    min-height: 100vh; /* Use the full height of the screen */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Default font settings */
+}
+
+/* Center text (for p tags, etc.) */
+p {
+    text-align: center; /* Center text within the paragraph */
+    max-width: 80%; /* Limit paragraph width to prevent stretching */
+    margin-bottom: 20px; /* Set bottom margin */
+}
+
+/* Center images (for img tags, etc.) */
+img {
+    display: block; /* Set as a block element to use margins */
+    margin-left: auto; /* Automatic left margin */
+    margin-right: auto; /* Automatic right margin */
+    max-width: 100%; /* Limit image width to prevent exceeding parent width */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+    margin-bottom: 20px; /* Set bottom margin */
+}
 
 /* 'Start' and Major State Blocks (White Block Style) */
 strong {
