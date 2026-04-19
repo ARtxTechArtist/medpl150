@@ -1,78 +1,147 @@
+:root {
+  --bg-color: #05050a;
+  --text-color: #e0e0e0;
+  --accent-cyan: #0ffff0;
+  --accent-red: #ff0055;
+  --accent-yellow: #f0f000;
+  --border-style: 1px solid var(--accent-cyan);
+  --font-main: "Courier New", Courier, monospace;
+}
+
 body {
-    background-color: #F0F0F2;
-    color: #222;
-    font-family: Arial, sans-serif;
-    margin: 40px;
-    line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIHZpZXdCb3g9IjAgMCA0IDQiPjxnIGZpbGwtb3BhY2l0eT0iMC4wNSIgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTAgMGg0djRIMGgwek0xIDF2MWgyVjFIMXoiLz48L2c+PC9zdmc+");
 }
 
-/* Title */
-h1 {
-    color: #03A65A;
-    font-size: 42px;
-    margin-bottom: 10px;
+main,
+.narrative-map {
+  max-width: 850px;
+  width: 100%;
 }
 
-/* Section titles */
 h2 {
-    color: #F28322;
-    margin-top: 30px;
-    font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  color: var(--text-color);
+  text-shadow: 0 0 6px var(--accent-cyan), 0 0 12px var(--accent-cyan);
 }
 
-/* Homework section spacing */
-h3 {
-    margin-top: 18px;
-    margin-bottom: 8px;
+.story-block {
+  margin: 20px 0;
+  padding: 15px 18px;
+  border: var(--border-style);
+  background-color: rgba(15, 255, 240, 0.04);
+  box-shadow: 0 0 10px rgba(15, 255, 240, 0.08);
 }
 
-/* Paragraph readability */
-p {
-    max-width: 900px;
-    font-size: 18px;
+.start-label,
+.choice-label,
+.ending-label,
+.scene-label {
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
-/* Image styling */
+.start-label,
+.scene-label {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.choice-label {
+  color: var(--accent-yellow);
+  border: 1px solid var(--accent-yellow);
+  background-color: transparent;
+}
+
+.ending-label {
+  color: var(--accent-red);
+  border: 1px solid var(--accent-red);
+  background-color: transparent;
+  text-shadow: 0 0 6px var(--accent-red);
+}
+
+.arrow {
+  text-align: center;
+  color: var(--accent-cyan);
+  font-size: 1.3em;
+  margin: 10px 0;
+  text-shadow: 0 0 6px var(--accent-cyan);
+}
+
+.branch {
+  color: var(--accent-cyan);
+  opacity: 0.8;
+  margin-right: 8px;
+}
+
+.choice-options {
+  margin-top: 10px;
+  padding-left: 18px;
+}
+
+.choice-options p {
+  margin: 8px 0;
+}
+
+.ending {
+  border-left: 3px solid var(--accent-red);
+  padding-left: 12px;
+  margin-top: 12px;
+}
+
+.scene-text,
+.choice-text,
+.ending-text {
+  margin: 8px 0;
+}
+
+a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 6px var(--accent-cyan);
+}
+
 img {
-    border-radius: 12px;
-    margin: 20px 0;
-    border: 4px solid #03A65A;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border: 1px solid var(--accent-cyan);
+  box-shadow: 0 0 14px rgba(15, 255, 240, 0.15);
 }
 
-/* Interactive links (buttons) */
-h3 a {
-    display: inline-block;
-    padding: 10px 16px;
-    background-color: #03A65A;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s ease;
-    font-weight: bold;
-}
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
 
-/* Hover = affordance + feedback */
-h3 a:hover {
-    background-color: #F2BE22;
-    color: #222;
-    transform: translateY(-2px);
-}
+  .story-block {
+    padding: 12px;
+  }
 
-/* Optional "danger" emphasis (like wrong choice) */
-.danger {
-    color: #D90404;
-}
-
-/* Strikethrough style */
-s {
-    color: #999;
-}
-
-/* Footer */
-footer {
-    margin-top: 50px;
-    font-size: 14px;
-    color: #555;
-    border-top: 2px solid #ddd;
-    padding-top: 15px;
+  h2 {
+    font-size: 1.2rem;
+  }
 }
